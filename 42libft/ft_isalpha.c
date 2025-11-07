@@ -6,14 +6,16 @@
 /*   By: bmelo <bmelo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/06 08:38:12 by bmelo             #+#    #+#             */
-/*   Updated: 2025/11/06 08:46:55 by bmelo            ###   ########.fr       */
+/*   Updated: 2025/11/07 13:11:11 by bmelo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int    ft_isalpha(char c)
+#include <libft.h>
+
+int	ft_isalpha(char c)
 {
-    if (('A' <= c && c <= 'Z') || ('a' <= c && c <= 'z'))
-        return (1);
-    else
-        return (0);
+	if (('A' <= c && c <= 'Z') || ('a' <= c && c <= 'z'))
+		return (1);
+	else
+		return (0);
 }

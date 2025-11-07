@@ -6,20 +6,22 @@
 /*   By: bmelo <bmelo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/06 09:31:37 by bmelo             #+#    #+#             */
-/*   Updated: 2025/11/06 10:14:03 by bmelo            ###   ########.fr       */
+/*   Updated: 2025/11/07 13:01:36 by bmelo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int strncmp(char *s1, char * s2, size_t l)
-{
-    int i;
+#include <libft.h>
 
-    i = 0
-    while ((s1[i] && s2[i]) && i < l)
-    {
-        if (s1[i] && s[i])
-            i++;
-        else
-            return (s1 - s2);
-    }
+int	ft_strncmp(char *s1, char *s2, size_t l)
+{
+	int	i;
+
+	i = 0;
+	while ((s1[i] && s2[i]) && i < l)
+	{
+		if (s1[i] && s[i])
+			i++;
+		else
+			return (s1 - s2);
+	}
 }

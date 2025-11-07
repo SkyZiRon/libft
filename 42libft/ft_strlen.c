@@ -6,16 +6,18 @@
 /*   By: bmelo <bmelo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/06 08:52:54 by bmelo             #+#    #+#             */
-/*   Updated: 2025/11/06 09:10:28 by bmelo            ###   ########.fr       */
+/*   Updated: 2025/11/07 13:09:21 by bmelo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-size_t  ft_strlen(char *str)
-{
-    int     i;
+#include <libft.h>
 
-    i = 0;
-    while (str[i])
-        i++;
-    return (i);
+size_t	ft_strlen(char *str)
+{
+	int	i;
+
+	i = 0;
+	while (str[i])
+		i++;
+	return (i);
 }

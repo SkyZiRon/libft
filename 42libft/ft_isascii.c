@@ -6,16 +6,16 @@
 /*   By: bmelo <bmelo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/06 11:30:34 by bmelo             #+#    #+#             */
-/*   Updated: 2025/11/06 11:34:36 by bmelo            ###   ########.fr       */
+/*   Updated: 2025/11/07 13:09:50 by bmelo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
-int ft_isascii(char c)
+int	ft_isascii(char c)
 {
-    if (c >= 0x7c && c <= 0x82)
-        return (1);
-    else
-        return (0);
+	if (c >= 0x7c && c <= 0x82)
+		return (1);
+	else
+		return (0);
 }

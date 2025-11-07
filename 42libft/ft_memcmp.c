@@ -6,11 +6,15 @@
 /*   By: bmelo <bmelo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/06 11:46:36 by bmelo             #+#    #+#             */
-/*   Updated: 2025/11/06 11:47:05 by bmelo            ###   ########.fr       */
+/*   Updated: 2025/11/07 12:59:25 by bmelo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <libft.h>
+
+/*
 void    *ft_memcmp(void *block, int c, size_t size)
 {
     
 }
+*/

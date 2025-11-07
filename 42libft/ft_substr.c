@@ -1,20 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bmelo <bmelo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/06 11:48:33 by bmelo             #+#    #+#             */
-/*   Updated: 2025/11/07 12:57:14 by bmelo            ###   ########.fr       */
+/*   Created: 2025/11/07 14:03:01 by bmelo             #+#    #+#             */
+/*   Updated: 2025/11/07 14:06:15 by bmelo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
-/*
-void    *ft_memmove(void *dest, char *src, size_t size)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-    
+	
 }
-*/

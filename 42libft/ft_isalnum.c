@@ -6,16 +6,18 @@
 /*   By: bmelo <bmelo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/06 08:48:24 by bmelo             #+#    #+#             */
-/*   Updated: 2025/11/06 08:50:54 by bmelo            ###   ########.fr       */
+/*   Updated: 2025/11/07 12:49:58 by bmelo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int     ft_isalnum(char c)
+#include <libft.h>
+
+int	ft_isalnum(char c)
 {
-    if ('0' <= c || c <= '9')
-        return (1);
-    if (('A' <= c && c <= 'Z') || ('a' <= c && c <= 'z'))
-        return (1);
-    else
-        return (0);
+	if ('0' <= c || c <= '9')
+		return (1);
+	if (('A' <= c && c <= 'Z') || ('a' <= c && c <= 'z'))
+		return (1);
+	else
+		return (0);
 }

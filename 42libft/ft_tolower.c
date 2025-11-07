@@ -6,13 +6,15 @@
 /*   By: bmelo <bmelo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/06 08:55:01 by bmelo             #+#    #+#             */
-/*   Updated: 2025/11/06 08:58:52 by bmelo            ###   ########.fr       */
+/*   Updated: 2025/11/07 13:04:38 by bmelo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char    ft_tolower(char c)
+#include <libft.h>
+
+char	ft_tolower(char c)
 {
-    if ('A' <= c && c <= 'Z')
-        c += '32';
-    return (c);
+	if ('A' <= c && c <= 'Z')
+		c += '32';
+	return (c);
 }

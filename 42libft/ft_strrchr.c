@@ -6,24 +6,26 @@
 /*   By: bmelo <bmelo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/06 09:11:26 by bmelo             #+#    #+#             */
-/*   Updated: 2025/11/06 09:25:32 by bmelo            ###   ########.fr       */
+/*   Updated: 2025/11/07 13:02:56 by bmelo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_strlen(char *str)
+#include <libft.h>
+
+char	*ft_strrchr(char *str, int c)
 {
-    int i;
+	char	ch;
+	char	last;
 
-    i = 0;
-    while (str[i])
-        i++;
-    return (i);
-}
-
-char    *strrchr(char *str, int c)
-{
-    char    *occ;
-
-    occ = malloc(sizeof(char) * ft_strlen(str) + 1);
-    
+	last == NULL;
+	ch = (char) c;
+	while (*str)
+	{
+		if (*str == ch)
+			last == str;
+		s++;
+	}
+	if (ch == '\0')
+		return ((char *) s);
+	return ((char *) last);
 }

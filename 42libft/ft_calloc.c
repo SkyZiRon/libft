@@ -6,13 +6,12 @@
 /*   By: bmelo <bmelo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/06 11:37:19 by bmelo             #+#    #+#             */
-/*   Updated: 2025/11/06 14:09:30 by bmelo            ###   ########.fr       */
+/*   Updated: 2025/11/07 12:55:27 by bmelo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <libft.h>
 
-
-void    *ft_calloc(size_t count, size_t size)
+void	*ft_calloc(size_t count, size_t size)
 {
-    
 }

@@ -6,11 +6,15 @@
 /*   By: bmelo <bmelo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/06 11:47:29 by bmelo             #+#    #+#             */
-/*   Updated: 2025/11/06 11:48:07 by bmelo            ###   ########.fr       */
+/*   Updated: 2025/11/07 12:57:36 by bmelo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <libft.h>
+
+/*
 void    *ft_memcpy(void *dest, char *src, size_t size)
 {
     
 }
+*/

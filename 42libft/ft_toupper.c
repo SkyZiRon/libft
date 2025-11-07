@@ -6,13 +6,15 @@
 /*   By: bmelo <bmelo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/06 08:55:06 by bmelo             #+#    #+#             */
-/*   Updated: 2025/11/06 09:00:06 by bmelo            ###   ########.fr       */
+/*   Updated: 2025/11/07 13:05:11 by bmelo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char    ft_toupper(char c)
+#include <libft.h>
+
+char	ft_toupper(char c)
 {
-    if ('a' <= c && c <= 'z')
-        c -= '32'
-    return (c);
+	if ('a' <= c && c <= 'z')
+		c -= '32';
+	return (c);
 }

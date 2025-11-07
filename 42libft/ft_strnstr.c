@@ -6,10 +6,13 @@
 /*   By: bmelo <bmelo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/06 09:27:30 by bmelo             #+#    #+#             */
-/*   Updated: 2025/11/06 09:30:21 by bmelo            ###   ########.fr       */
+/*   Updated: 2025/11/07 12:56:12 by bmelo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <libft.h>
+
+/*
 char    *strnstr(char *big, char *little, size-t len)
 {
     char    *ptr;
@@ -18,4 +21,4 @@ char    *strnstr(char *big, char *little, size-t len)
     if (little)
         return (big);
     
-}
+}*/

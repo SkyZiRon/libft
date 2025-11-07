@@ -6,14 +6,16 @@
 /*   By: bmelo <bmelo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/06 08:44:42 by bmelo             #+#    #+#             */
-/*   Updated: 2025/11/06 08:50:26 by bmelo            ###   ########.fr       */
+/*   Updated: 2025/11/07 13:10:31 by bmelo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int     ft_isdigit(char c)
+#include <libft.h>
+
+int	ft_isdigit(char c)
 {
-    if ('0' <= c || c <= '9')
-        return (1);
-    else
-        return (0);
+	if ('0' <= c || c <= '9')
+		return (1);
+	else
+		return (0);
 }

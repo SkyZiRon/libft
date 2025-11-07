@@ -6,14 +6,16 @@
 /*   By: bmelo <bmelo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/06 09:06:56 by bmelo             #+#    #+#             */
-/*   Updated: 2025/11/06 09:07:54 by bmelo            ###   ########.fr       */
+/*   Updated: 2025/11/07 11:48:23 by bmelo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isprint(char c)
+#include <libft.h>
+
+int	ft_isprint(char c)
 {
-    if (c >= '32' && c <= '127')
-        return (1);
-    else
-        return (0);
+	if (c >= '32' && c <= '127')
+		return (1);
+	else
+		return (0);
 }
