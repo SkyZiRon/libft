@@ -1,29 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bmelo <bmelo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/06 11:45:15 by bmelo             #+#    #+#             */
-/*   Updated: 2025/11/07 15:12:33 by bmelo            ###   ########.fr       */
+/*   Created: 2025/11/06 08:52:54 by bmelo             #+#    #+#             */
+/*   Updated: 2025/11/11 17:11:55 by bmelo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
-void	*memchr(void *s, int c, size_t size)
+size_t	ft_strlen(char *str)
 {
-	char chr;
 	int	i;
 
 	i = 0;
-	chr = (char *) c;
-	while (i < size)
-	{
-		if (*s == char)
-			return ((char *) s + i);
+	while (str[i])
 		i++;
-	}
-	return (NULL);
+	return (i);
 }
+
+/*
+int main(void) 
+{
+    printf("%s", ft_strtrim("         ", "a "));
+    return 0;
+}
+*/

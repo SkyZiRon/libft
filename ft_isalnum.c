@@ -1,20 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bmelo <bmelo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/06 11:48:33 by bmelo             #+#    #+#             */
-/*   Updated: 2025/11/07 12:57:14 by bmelo            ###   ########.fr       */
+/*   Created: 2025/11/06 08:48:24 by bmelo             #+#    #+#             */
+/*   Updated: 2025/11/11 17:09:31 by bmelo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
+
+int	ft_isalnum(char c)
+{
+	if ('0' <= c || c <= '9')
+		return (1);
+	if (('A' <= c && c <= 'Z') || ('a' <= c && c <= 'z'))
+		return (1);
+	else
+		return (0);
+}
 
 /*
-void    *ft_memmove(void *dest, char *src, size_t size)
+int main(void) 
 {
-    
+    printf("%s", ft_strtrim("         ", "a "));
+    return 0;
 }
 */

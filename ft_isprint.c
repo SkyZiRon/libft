@@ -1,21 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bmelo <bmelo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/06 08:44:42 by bmelo             #+#    #+#             */
-/*   Updated: 2025/11/07 13:10:31 by bmelo            ###   ########.fr       */
+/*   Created: 2025/11/06 09:06:56 by bmelo             #+#    #+#             */
+/*   Updated: 2025/11/11 17:09:48 by bmelo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
-int	ft_isdigit(char c)
+int	ft_isprint(char c)
 {
-	if ('0' <= c || c <= '9')
+	if (c >= '32' && c <= '127')
 		return (1);
 	else
 		return (0);
 }
+
+/*
+int main(void) 
+{
+    printf("%s", ft_strtrim("         ", "a "));
+    return 0;
+}
+*/

@@ -6,13 +6,13 @@
 /*   By: bmelo <bmelo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/06 10:43:41 by bmelo             #+#    #+#             */
-/*   Updated: 2025/11/07 11:50:12 by bmelo            ###   ########.fr       */
+/*   Updated: 2025/11/11 17:19:01 by bmelo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
-char	ft_atoi(char *str)
+int	ft_atoi(char *str)
 {
 	int	i;
 	int	res;
@@ -20,19 +20,30 @@ char	ft_atoi(char *str)
 
 	sign = 1;
 	i = 0;
-	res 0;
+	res = 0;
 	while (str[i] == 32 || (str[i] >= 9 && str[i] <= 13))
 		i++;
-	while (str[i] == '+' || str[i] == '-')
+	if (str[i] == '-')
 	{
-		if (str[i] == '-')
-		sign = -sign;
+		sign = -1;
 		i++;
 	}
+	if (str[i] == '+')
+		i++;
 	while (str[i] >= '0' && str[i] <= '9')
 	{
-		res = res * 10 + (str[i] - '0');
+		res = (res * 10) + (str[i] - '0');
 		i++;
 	}
 	return (res * sign);
 }
+
+/*
+int	main(void)
+{
+	char	*str;
+
+	str = "      +687645416rqerewr";
+	printf("%d\n", ft_atoi(str));
+	return (0);
+}*/

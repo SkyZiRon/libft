@@ -1,26 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bmelo <bmelo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/06 10:05:19 by bmelo             #+#    #+#             */
-/*   Updated: 2025/11/07 13:11:49 by bmelo            ###   ########.fr       */
+/*   Created: 2025/11/06 11:46:36 by bmelo             #+#    #+#             */
+/*   Updated: 2025/11/11 17:09:58 by bmelo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
-void	*ft_bzero(void *ptr, int value, size_t count)
+int	*ft_memcmp(void *s1, void *s2, size_t n)
 {
-	size_t	i;
-	char	*dest;
+	size_t		i;
+	char		*p1;
+	char		*p2;
 
-	value = '\0';
+	p1 = (char *) s1;
+	p2 = (char *) s2;
 	i = 0;
-	dest = ptr;
-	while (i < count)
-		dest[i++] = value;
-	return (dest);
+	while (i < n)
+	{
+		if (p1[i] != p2[i])
+			return (p1[i] - p2[i]);
+		i++;
+	}
+	return (0);
 }
+
+/*
+int main(void) 
+{
+    printf("%s", ft_strtrim("         ", "a "));
+    return 0;
+}
+*/

@@ -1,25 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bmelo <bmelo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/06 09:37:25 by bmelo             #+#    #+#             */
-/*   Updated: 2025/11/07 12:58:56 by bmelo            ###   ########.fr       */
+/*   Created: 2025/11/11 14:40:04 by bmelo             #+#    #+#             */
+/*   Updated: 2025/11/11 17:11:55 by bmelo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
-void	*ft_memset(void *ptr, int value, size_t count)
+void	ft_putstr_fd(char *s, int fd)
 {
-	size_t	i;
-	char	*dest;
+	int	i;
 
 	i = 0;
-	dest = ptr;
-	while (i < count)
-		dest[i++] = value;
-	return (dest);
+	while (s[i])
+	{
+		write(fd, &s[i], 1);
+		i++;
+	}
 }
+
+/*
+int main(void) 
+{
+    printf("%s", ft_strtrim("         ", "a "));
+    return 0;
+}
+*/

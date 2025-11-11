@@ -1,29 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bmelo <bmelo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/06 11:35:11 by bmelo             #+#    #+#             */
-/*   Updated: 2025/11/07 13:03:56 by bmelo            ###   ########.fr       */
+/*   Created: 2025/11/06 11:47:29 by bmelo             #+#    #+#             */
+/*   Updated: 2025/11/11 17:10:00 by bmelo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
-char	*ft_strchr(char *str, int c)
+void	*ft_memcpy(void *dest, char *src, size_t size)
 {
-	char	ch;
+	int		i;
+	char	*ptr;
 
-	ch = (char) c;
-	while (*str)
+	i = 0;
+	ptr = malloc(sizeof(char) * size);
+	while (i < size)
 	{
-		if (*str == ch)
-			return ((char *) s);
-		s++;
+		ptr[i] = src[i];
+		i++;
 	}
-	if (ch == '\0')
-		return ((char *) s);
-	return (NULL);
+	dest = ptr;
+	return (dest);
 }
+
+/*
+int main(void) 
+{
+    printf("%s", ft_strtrim("         ", "a "));
+    return 0;
+}
+*/

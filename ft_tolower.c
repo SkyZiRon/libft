@@ -1,23 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bmelo <bmelo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/06 08:52:54 by bmelo             #+#    #+#             */
-/*   Updated: 2025/11/07 13:09:21 by bmelo            ###   ########.fr       */
+/*   Created: 2025/11/06 08:55:01 by bmelo             #+#    #+#             */
+/*   Updated: 2025/11/11 17:11:55 by bmelo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
-size_t	ft_strlen(char *str)
+char	ft_tolower(char c)
 {
-	int	i;
-
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
+	if ('A' <= c && c <= 'Z')
+		c += '32';
+	return (c);
 }
+
+/*
+int main(void) 
+{
+    printf("%s", ft_strtrim("         ", "a "));
+    return 0;
+}
+*/

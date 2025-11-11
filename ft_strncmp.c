@@ -1,41 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bmelo <bmelo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/06 10:08:04 by bmelo             #+#    #+#             */
-/*   Updated: 2025/11/07 12:54:39 by bmelo            ###   ########.fr       */
+/*   Created: 2025/11/06 09:31:37 by bmelo             #+#    #+#             */
+/*   Updated: 2025/11/11 17:11:55 by bmelo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
-int	ft_strlen(char *str)
+int	ft_strncmp(char *s1, char *s2, size_t l)
 {
 	int	i;
 
 	i = 0;
-	while (str[i])
-		i++;
-	return (i);
-}
-
-char	*ft_strdup(char *src)
-{
-	char	*copy;
-	int		i;
-
-	i = 0;
-	copy = malloc(ft_strlen(src) * sizeof(char));
-	if (copy == NULL)
-		return (0);
-	while (src[i])
+	while ((s1[i] && s2[i]) && i < l)
 	{
-		copy[i] = src[i];
-		i++;
+		if (s1[i] == s2[i])
+			i++;
+		else
+			return (s1 - s2);
 	}
-	copy[i] = '\0';
-	return (copy);
 }
+
+/*
+int main(void) 
+{
+    printf("%s", ft_strtrim("         ", "a "));
+    return 0;
+}
+*/

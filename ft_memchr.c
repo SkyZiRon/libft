@@ -1,31 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bmelo <bmelo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/06 11:46:36 by bmelo             #+#    #+#             */
-/*   Updated: 2025/11/08 15:47:21 by bmelo            ###   ########.fr       */
+/*   Created: 2025/11/06 11:45:15 by bmelo             #+#    #+#             */
+/*   Updated: 2025/11/11 17:09:54 by bmelo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
-int	*ft_memcmp(void *s1, void *s2, size_t n)
+void	*ft_memchr(void *s, int c, size_t size)
 {
-	size_t i;
-	char *p1;
-	char *p2;
+	int		i;
+	char	chr;
 
-	p1 = (char *) s1;
-	p2 = (char *) s2;
 	i = 0;
-	while (i < n)
+	chr = (char *) c;
+	while (i < size)
 	{
-		if (p1[i] != p2[i])
-			return (p1[i] - p2[i]);
+		if (s == chr)
+			return ((char *) s + i);
 		i++;
 	}
-	return (0);
+	return (NULL);
 }
+
+/*
+int main(void) 
+{
+    printf("%s", ft_strtrim("         ", "a "));
+    return 0;
+}
+*/

@@ -1,38 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bmelo <bmelo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/06 11:37:19 by bmelo             #+#    #+#             */
-/*   Updated: 2025/11/08 16:48:48 by bmelo            ###   ########.fr       */
+/*   Created: 2025/11/06 10:34:17 by bmelo             #+#    #+#             */
+/*   Updated: 2025/11/11 17:11:55 by bmelo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
-void	*ft_memset(void *ptr, int value, size_t count)
+int	strlen(char *str)
 {
-	size_t	i;
-	char	*dest;
+	int	i;
 
 	i = 0;
-	dest = ptr;
-	while (i < count)
-		dest[i++] = value;
+	while (str[i])
+		i++;
+	return (i);
+}
+
+char	*strlcat(char *dest, char *src, size_t l)
+{
+	int	i;
+	int	j;
+
+	i = 0;
+	j = ft_strlen(src);
+	while (i < l)
+		dest[j++] = src[i];
+	dest[j] = '\0';
 	return (dest);
 }
 
-void	*ft_calloc(size_t nmeb, size_t size)
+/*
+int main(void) 
 {
-	void *ptr;
-	size_t total;
-
-	total = nmeb * size;
-	ptr = malloc(total);
-	if (!ptr)
-		return (NULL);
-	 memset(ptr, 0, total);
-	 return (ptr);
+    printf("%s", ft_strtrim("         ", "a "));
+    return 0;
 }
+*/

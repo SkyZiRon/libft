@@ -1,24 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bmelo <bmelo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/06 09:27:30 by bmelo             #+#    #+#             */
-/*   Updated: 2025/11/07 12:56:12 by bmelo            ###   ########.fr       */
+/*   Created: 2025/11/06 09:37:25 by bmelo             #+#    #+#             */
+/*   Updated: 2025/11/11 17:10:06 by bmelo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
+
+void	*ft_memset(void *ptr, int value, size_t count)
+{
+	size_t	i;
+	char	*dest;
+
+	i = 0;
+	dest = ptr;
+	while (i < count)
+		dest[i++] = value;
+	return (dest);
+}
 
 /*
-char    *strnstr(char *big, char *little, size-t len)
+int main(void) 
 {
-    char    *ptr;
-
-    
-    if (little)
-        return (big);
-    
-}*/
+    printf("%s", ft_strtrim("         ", "a "));
+    return 0;
+}
+*/

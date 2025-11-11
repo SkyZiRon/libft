@@ -1,20 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bmelo <bmelo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/06 08:55:06 by bmelo             #+#    #+#             */
-/*   Updated: 2025/11/07 13:05:11 by bmelo            ###   ########.fr       */
+/*   Created: 2025/11/06 11:48:33 by bmelo             #+#    #+#             */
+/*   Updated: 2025/11/11 17:10:02 by bmelo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
-char	ft_toupper(char c)
+void	*ft_memmove(void *dest, char *src, size_t size)
 {
-	if ('a' <= c && c <= 'z')
-		c -= '32';
-	return (c);
+	int		i;
+	char	*ptr;
+
+	i = 0;
+	ptr = malloc(sizeof(char) * size);
+	while (i < size)
+	{
+		ptr[i] = src[i];
+		i++;
+	}
+	dest = ptr;
+	return (dest);
 }
+
+/*
+int main(void) 
+{
+    printf("%s", ft_strtrim("         ", "a "));
+    return 0;
+}
+*/

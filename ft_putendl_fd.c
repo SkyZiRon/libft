@@ -1,36 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bmelo <bmelo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/06 10:34:17 by bmelo             #+#    #+#             */
-/*   Updated: 2025/11/07 13:06:27 by bmelo            ###   ########.fr       */
+/*   Created: 2025/11/11 14:42:51 by bmelo             #+#    #+#             */
+/*   Updated: 2025/11/11 17:11:55 by bmelo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
-int	strlen(char *str)
+void	ft_putendl_fd(char *s, int fd)
 {
 	int	i;
 
 	i = 0;
-	while (str[i])
+	while (s[i])
+	{
+		write(fd, &s[i], 1);
 		i++;
-	return (i);
+	}
+	write(fd, '\n', 1);
 }
 
-char	*strlcat(char *dest, char *src, size_t l)
+/*
+int main(void) 
 {
-	int	i;
-	int	j;
-
-	i = 0;
-	j = ft_strlen(src);
-	while (i < l)
-		dest[j++] = src[i];
-	dest[j] = '\0';
-	return (dest);
+    printf("%s", ft_strtrim("         ", "a "));
+    return 0;
 }
+*/

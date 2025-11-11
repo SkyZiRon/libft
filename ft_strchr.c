@@ -1,27 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bmelo <bmelo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/06 09:31:37 by bmelo             #+#    #+#             */
-/*   Updated: 2025/11/07 13:01:36 by bmelo            ###   ########.fr       */
+/*   Created: 2025/11/06 11:35:11 by bmelo             #+#    #+#             */
+/*   Updated: 2025/11/11 17:11:55 by bmelo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
-int	ft_strncmp(char *s1, char *s2, size_t l)
+char	*ft_strchr(char *str, int c)
 {
-	int	i;
+	char	ch;
 
-	i = 0;
-	while ((s1[i] && s2[i]) && i < l)
+	ch = (char) c;
+	while (*str)
 	{
-		if (s1[i] && s[i])
-			i++;
-		else
-			return (s1 - s2);
+		if (*str == ch)
+			return ((char *) str);
+		str++;
 	}
+	if (ch == '\0')
+		return ((char *) str);
+	return (NULL);
 }
+
+/*
+int main(void) 
+{
+    printf("%s", ft_strtrim("         ", "a "));
+    return 0;
+}
+*/

@@ -1,23 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bmelo <bmelo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/06 08:48:24 by bmelo             #+#    #+#             */
-/*   Updated: 2025/11/07 12:49:58 by bmelo            ###   ########.fr       */
+/*   Created: 2025/11/06 08:38:12 by bmelo             #+#    #+#             */
+/*   Updated: 2025/11/11 17:09:34 by bmelo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
-int	ft_isalnum(char c)
+int	ft_isalpha(char c)
 {
-	if ('0' <= c || c <= '9')
-		return (1);
 	if (('A' <= c && c <= 'Z') || ('a' <= c && c <= 'z'))
 		return (1);
 	else
 		return (0);
 }
+
+/*
+int main(void) 
+{
+    printf("%s", ft_strtrim("         ", "a "));
+    return 0;
+}
+*/

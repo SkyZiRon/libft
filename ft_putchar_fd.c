@@ -1,21 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bmelo <bmelo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/06 08:38:12 by bmelo             #+#    #+#             */
-/*   Updated: 2025/11/07 13:11:11 by bmelo            ###   ########.fr       */
+/*   Created: 2025/11/11 14:34:06 by bmelo             #+#    #+#             */
+/*   Updated: 2025/11/11 17:10:08 by bmelo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
-int	ft_isalpha(char c)
+void	ft_putchar_fd(char c, int fd)
 {
-	if (('A' <= c && c <= 'Z') || ('a' <= c && c <= 'z'))
-		return (1);
-	else
-		return (0);
+	write (fd, &c, 1);
 }
+
+/*
+int main(void) 
+{
+    printf("%s", ft_strtrim("         ", "a "));
+    return 0;
+}
+*/

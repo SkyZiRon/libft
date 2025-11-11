@@ -6,11 +6,11 @@
 /*   By: bmelo <bmelo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/06 09:11:26 by bmelo             #+#    #+#             */
-/*   Updated: 2025/11/07 13:02:56 by bmelo            ###   ########.fr       */
+/*   Updated: 2025/11/11 17:11:55 by bmelo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 char	*ft_strrchr(char *str, int c)
 {
@@ -23,9 +23,17 @@ char	*ft_strrchr(char *str, int c)
 	{
 		if (*str == ch)
 			last == str;
-		s++;
+		str++;
 	}
 	if (ch == '\0')
-		return ((char *) s);
+		return ((char *) str);
 	return ((char *) last);
 }
+
+/*
+int main(void) 
+{
+    printf("%s", ft_strtrim("         ", "a "));
+    return 0;
+}
+*/
